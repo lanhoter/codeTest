@@ -5,7 +5,7 @@ const intialArr = [1, 2, 3, [4, 5, [6, 7, 8, [9, 10]], [10,11,[12, [13,14]]]]]
 // flatten one level
 function flat(arr){
     let res = [];
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         Array.isArray(arr[i]) ? res = res.concat(flat(arr[i])) : res.push(arr[i])
     }
     return res;
@@ -14,7 +14,7 @@ function flat(arr){
 // deep flatten
 function flatDeep(array, deep){
     let res = [];
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         Array.isArray(array[i]) && deep >= 1 ? res = res.concat(flatDeep(array[i], deep - 1)) : res.push(array[i])
     }
     return res;
