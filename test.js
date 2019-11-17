@@ -9,7 +9,7 @@ const vehicles = [
 let countItem = (arr) => {
     let res = []
     arr.map(item => Object.values(item).forEach(singleItem => res.push(singleItem)))
-    const count = res.reduce((allElements, ele) => {
+    return count = res.reduce((allElements, ele) => {
         if (ele in allElements) {
             allElements[ele]++;
         } else {
@@ -17,6 +17,5 @@ let countItem = (arr) => {
         }
         return allElements;
     }, {});
-    return count;
 }
 console.log(countItem(vehicles));
