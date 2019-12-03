@@ -8,7 +8,7 @@ const isMonotonic = (arr) => {
     let inc = 1;
     let dec = 1;
     arrLen = arr.length;
-    for (let i = 1; i < arrLen; i++) {
+    for (let i = 1; i < arrLen; ++i) {
         inc += (arr[i - 1] <= arr[i]);
         dec += (arr[i - 1] >= arr[i]);
     }
@@ -19,7 +19,7 @@ const isMonotonic = (arr) => {
 const isMonotonic2 = (arr) => {
     let flag = 0; //increasing - 1; decreasing -2
     if (arr.length <= 1) return true;
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; ++i) {
         if (arr[i] > arr[i - 1]) {
             if (flag === 2) return false;
             flag = 1;

@@ -11,14 +11,14 @@ let partition = (arr, left, right) => {
         j = right; //right pointer
     while (i <= j) {
         while (arr[i] < pivot) {
-            i++;
+            ++i;
         }
         while (arr[j] > pivot) {
             j--;
         }
         if (i <= j) {
             swap(arr, i, j); //sawpping two elements
-            i++;
+            ++i;
             j--;
         }
     }

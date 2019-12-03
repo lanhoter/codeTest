@@ -10,7 +10,7 @@ let restoreIpAddresses = function (s) {
         if (remainLength > (4 - array.length) * 3) {
             return;
         }
-        for (let i = 1; i < str.length && i <= 3; i++) {
+        for (let i = 1; i < str.length && i <= 3; ++i) {
             const substr = str.substr(start, i);
             if (i == 3 && + substr > 255) {
                 continue;

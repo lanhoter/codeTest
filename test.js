@@ -11,7 +11,7 @@ let countItem = (arr) => {
     arr.map(item => Object.values(item).forEach(singleItem => res.push(singleItem)))
     return count = res.reduce((allElements, ele) => {
         if (ele in allElements) {
-            allElements[ele]++;
+            ++allElements[ele];
         } else {
             allElements[ele] = 1;
         }
