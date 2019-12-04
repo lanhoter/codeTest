@@ -41,4 +41,16 @@ const isPalindrome = x => {
 }
 
 
+let isPalindrome2 = (x) => {
+    const arr = String(x).split('');
+    for (let i = 0; i < arr.length / 2; ++i) {
+        if (arr[i] !== arr[arr.length - (i + 1)]) {
+            return false;
+        }
+    }
+    return true;
+};
+
+
 console.log(isPalindrome(121))
+console.log(isPalindrome2('aba'))
