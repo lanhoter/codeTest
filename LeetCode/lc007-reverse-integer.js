@@ -1,8 +1,8 @@
 let reverse = (x) => {
-    // 转数组
+    // covert to array
     let numberToArray = String(Math.abs(x)).split('');
 
-    // 转字符串
+    // covert string
     let result = '';
     for (const i = 0; i < numberToArray.length;) {
         result += numberToArray.pop();
