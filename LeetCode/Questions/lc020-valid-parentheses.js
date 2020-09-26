@@ -1,10 +1,10 @@
 var isValid = function (s) {
   let judge = {
-    '[': ']',
-    '(': ')',
-    '{': '}',
-  }
-  let parameter = s.split('');
+    "[": "]",
+    "(": ")",
+    "{": "}",
+  };
+  let parameter = s.split("");
   let stack = [];
   for (let i = 0; i < parameter.length; ++i) {
     if (judge[stack[stack.length - 1]] === parameter[i]) {
@@ -19,5 +19,4 @@ var isValid = function (s) {
   return false;
 };
 
-
-console.log(isValid('()[]{}'))
+console.log(isValid("()[]{}"));

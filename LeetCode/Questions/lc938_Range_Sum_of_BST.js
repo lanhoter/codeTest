@@ -3,8 +3,6 @@
 
 The binary search tree is guaranteed to have unique values.
 
- 
-
 Example 1:
 
 Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
@@ -15,8 +13,6 @@ Example 2:
 Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
 Output: 23
 
- 
-
 Note:
 
     The number of nodes in the tree is at most 10000.
@@ -26,9 +22,11 @@ Note:
 */
 
 let rangeSumBST = (root, L, R) => {
-    if (!root) return 0;
-    if (root.val >= L && root.val <= R) {
-        return root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
-    }
-    return 0 + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
+  if (!root) return 0;
+  if (root.val >= L && root.val <= R) {
+    return (
+      root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R)
+    );
+  }
+  return 0 + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
 };

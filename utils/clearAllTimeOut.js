@@ -14,14 +14,13 @@ setTimeout(callback, delay);
 let oldTimeout = window.setTimeout;
 let allTimeout = [];
 
-window.setTimeout = function(callback, delay) {
-	let id = oldTimeout(callback, delay);
-	allTimeout.push(id);
-	return id;
-}
+window.setTimeout = function (callback, delay) {
+  let id = oldTimeout(callback, delay);
+  allTimeout.push(id);
+  return id;
+};
 
 function creallAllTimeout() {
-	allTimeout.forEach(id => clearTimeout(id));
-	allTimeout = [];
+  allTimeout.forEach((id) => clearTimeout(id));
+  allTimeout = [];
 }
-

@@ -42,20 +42,20 @@
  */
 
 let countAndSay = (n) => {
-    let val = "1"
-    for (let i = 1; i < n; ++i) {
-        let num = 1
-        let str = ""
-        for (let j = 0; j < val.length; ++j) {
-            if (val[j] == val[j + 1]) {
-                ++num
-            } else {
-                str += num + val[j]
-                num = 1
-            }
-        }
-        val = str
+  let val = "1";
+  for (let i = 1; i < n; ++i) {
+    let num = 1;
+    let str = "";
+    for (let j = 0; j < val.length; ++j) {
+      if (val[j] == val[j + 1]) {
+        ++num;
+      } else {
+        str += num + val[j];
+        num = 1;
+      }
     }
-    return val
-}
-console.log(countAndSay(4))
+    val = str;
+  }
+  return val;
+};
+console.log(countAndSay(4));

@@ -13,7 +13,6 @@
 
 // There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
 
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -25,9 +24,11 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const sumOfLeftLeaves = function(root, isLeft = false) {
-    if (!root) return 0;
-    if (!root.left && !root.right) return isLeft ? root.val : 0;
-    console.log(sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false))
-    return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
+const sumOfLeftLeaves = function (root, isLeft = false) {
+  if (!root) return 0;
+  if (!root.left && !root.right) return isLeft ? root.val : 0;
+  console.log(
+    sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false)
+  );
+  return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
 };
